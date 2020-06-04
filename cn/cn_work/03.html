@@ -69,26 +69,25 @@
 					</p>
 					<p>
 						<p class="date">下载课程</p>
-						在技术博客里看到了下载的教程，按照<a href="https://pypi.org/project/coursera-dl/">Coursera Downloader</a>的教程，可以走到在终端运行出这样的结果：
+						在技术博客里看到了下载的教程，按照<a href="https://pypi.org/project/coursera-dl/">Coursera Downloader</a>的教程，一步步顺利的话可以看到终端运行出这样的结果：
 						<img src="/Users/mac/Desktop/cookies.png">
+						显示登录有问题，不要气馁（我曾卡在这里一度删除了上面所有文件），实际上我们已经接近了成功的终点，这时只需要再设置一下最后命令中的Cauth参数，以Chrome浏览器为例：
+						<ul>
+							<li>
+								在设置中打开隐私和安全性>-网站设置>-Cookie和网站数据>-查看所有Cookie和网站数据；
+							</li>
+							<li>在右上角搜索Coursera>-Coursera.org>-CAUTH</li>
+							<li>复制内容</li>
+							<li>终端键入：
+								<p class="code">
+									./coursera-dl -u 用户名 -p 密码 --path=/视频保存路径/ 课程代号 --cauth 上述复制内容
+								</p>
+						</ul>
+						就可以在指定的保存路径中收获课程啦，再也不担心视频不能看的问题了，虽然是麻烦一点，但也是一个逐渐了解编程和计算机和网络的过程。本文主要是解决在Coursera上课中遇到的问题，至于如何寻找ip地址，如何验证ip地址有效，什么是ip，什么是hosts，什么是DNS，甚至什么是终端，都不在本文讨论范围，尽情在搜索引擎里遨游吧。
 					</p>
-					
-			
-				
-                更改host文件
-                先ping
-                批量下载Coursera视频
-                    下载Cousera Downloader
-                    <a href="https://pypi.org/project/coursera-dl/#coursera-downloader">官方教程（英文）</a>
-                    如果不想费脑子配置后台，可以先在这个网站检索有没有想要的课程：
-                    <a href="http://blog.coursegraph.com/tag/coursera下载">Coursera公开资源列表</a>（包含下载教程中文）
-                使用Cousera Download的经验：
-                    打开终端
-                    cd coursera-dl
-                    ./coursera-dl -u 用户名 -p 密码 --path=保存路径 课程名字
 			</p>
 				<div class="footer">©Yani Huang 2019-2020</div>	
-			</div>
+		</div>
 		
 	</body>
 </html>
