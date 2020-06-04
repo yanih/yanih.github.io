@@ -40,13 +40,13 @@
 						<p class="date">查看学习视频</p>
 						进入渴望已久的课程之后就会发现，视频一直在缓冲,加载不出来。这不是网速的原因，其实是因为Coursera在托管在海外网站，我们的电脑无法解析Coursera这个域名下的ip，网页发出的申请到不了该去的地方。我们需要手动把能用的IP地址写入本机，帮助电脑快速到达视频所在的ip地址，获取视频。这包括两个步骤：1）找到能用的ip地址，2）把ip地址添加到hosts文件。
 						对于步骤1，网络上已经有很多前辈贴出了有用的ip：
-						<blockquote>
+						<p class="code">
 							52.84.246.72   d3c33hcgiwev3.cloudfront.net<br>
 							52.84.246.90   d3c33hcgiwev3.cloudfront.net<br>
 							52.84.246.252  d3c33hcgiwev3.cloudfront.net<br>
 							54.84.167.78   d3c33hcgiwev3.cloudfront.net<br>
 							52.84.246.144  d3c33hcgiwev3.cloudfront.net<br>
-						</blockquote>
+						</p>
 						接下来我们就需要打开并添加以上地址到hosts文件中，我的电脑是MacOS系统，以下操作Windows和Linux系统会略有不同，百度都有。
 						<ul>
 							<li>打开终端（command+空格搜索“终端”）>-输入 /private/etc，在etc文件夹里找到hosts；
