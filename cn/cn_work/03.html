@@ -24,12 +24,12 @@
 	   </nav>
 	   
 		<div class="main">
-			<h1>Coursera使用经验-mac版</h1>
+			<h1>Coursera使用经验</h1>
 			<div class="name">黄雅妮 \ 2020年6月4日</div>
 			<p>
 				<a href="https://www.coursera.org/">Coursera</a>是个学习网站，类似于Mooc，拥有许多优质的国外高校课程，是放假在家坚持学习的好工具。
 				以下我使用Coursera以来遇到的问题和解决方法。<br>
-				<ol>
+				
 					<li>
 						<h2>申请助学金</h2>
 						虽说是国外学习网站，但是国内进入、登录和注册都是不需要翻墙的，可以轻松拥有自己的学习账号。第一个问题随之而来，如何免费学习自己渴望已久的课？
@@ -46,19 +46,19 @@
 							54.84.167.78   d3c33hcgiwev3.cloudfront.net<br>
 							52.84.246.144  d3c33hcgiwev3.cloudfront.net<br>
 						</blockquote>
-						这是知乎和百度经验的前辈们搜罗出的亲测有效的几个ip地址，接下来我们就需要打开并添加以上地址到hosts文件中，我的电脑是MacOS系统，以下操作Win和Linux略有不同，百度皆有。
+						这是知乎和百度经验的前辈们搜罗出亲测有效的几个ip地址，接下来我们就需要打开并添加以上地址到hosts文件中，我的电脑是MacOS系统，以下操作Win和Linux略有不同，百度皆有。
 						<ul>
 							<li>
-								首先需要找到host文件：打开终端（command+空格搜索）>-输入 /private/etc，在这个文件夹里找到hosts；
+								首先需要找到host文件：打开终端（command+空格搜索“终端”）>-输入 /private/etc，在etc文件夹里找到hosts；
 							</li>
 							<li>此时hosts文件是不可修改的，需要把它拖动到桌面；</li>
 							<li>打开桌面上的hosts，复制上述ip地址到hosts的最后；</li>
 							<li>保存，将hosts拖回刚才的etc文件夹，替换。</li>
 							<li>刷新系统DNS：在终端输入指令 sudo dscacheutil -flushcache</li>
-							<li>此时，刷新Coursera网页，视频有可能就会出来了。</li>
+							<li>刷新Coursera网页，视频有可能就会出来了。</li>
 						</ul>
 					</li>
-				</ol>
+			
 				
                 更改host文件
                 先ping
