@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="author" content="黄雅妮">
+		<meta name="description" content="personal website of Yani Huang;黄雅妮的个人网站">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/font.css">
+        <link rel="icon" href="../../img/moon.jpg" type="image/x-icon"/>
+		<title>日志 · 黄雅妮</title>
+	</head>
+
+	<body>
+		<nav>
+			<h2><a href="../cn_work.html">· 日志</a></h2>
+				<ul class="sidebar">
+					<li><a href="../cn_index.html">中文主页</a></li>
+					<li><a href="../cn_art.html">随笔</a></li>
+					<li><a href="../../../index.html">首页</a></li>
+				</ul>
+	   </nav>
+	   
+		<div class="main">
+			<h1>Coursera使用经验-mac版</h1>
+			<div class="name">黄雅妮 \ 2020年6月4日</div>
+			<p>
+				<a href="https://www.coursera.org/">Coursera</a>是个学习网站，类似于Mooc，拥有许多优质的国外高校课程，是放假在家坚持学习的好工具。
+				以下我使用Coursera以来遇到的问题和解决方法。<br>
+				<ol>
+					<li>
+						<h2>申请助学金</h2>
+						虽说是国外学习网站，但是国内进入、登录和注册都是不需要翻墙的，可以轻松拥有自己的学习账号。第一个问题随之而来，如何免费学习自己渴望已久的课？
+						大多数的课程都会设置助学金，每次只需要写上一段中心思想为“我没有钱，但是这门课对我很重要”的小作文，等待15天的审核，一般都可以申请到助学金（免费），然后愉快地上课。
+						我推测这个过程是由机器审核，根据课程的标题修改一下上一次的小作文就可以顺利通过，所以写好一份申请模版就可以一劳永逸。
+					</li>
+					<li>
+						<h2>查看学习视频</h2>
+						进入渴望已久的课程之后就会发现，为什么视频一直在缓冲，加载不出来？这不是网速的障碍，其实是网站ip无法解析，网页发出的申请到不了该去的地方。我们需要手动把能用的IP地址加入到本机的hosts文件中，帮助电脑快速到达视频所在的ip地址。这包括两个步骤：1）找到能用的ip地址，2）加入到host文件。
+						<blockquote>
+							52.84.246.72   d3c33hcgiwev3.cloudfront.net<br>
+							52.84.246.90   d3c33hcgiwev3.cloudfront.net<br>
+							52.84.246.252  d3c33hcgiwev3.cloudfront.net<br>
+							54.84.167.78   d3c33hcgiwev3.cloudfront.net<br>
+							52.84.246.144  d3c33hcgiwev3.cloudfront.net<br>
+						</blockquote>
+						这是知乎和百度经验的前辈们搜罗出的亲测有效的几个ip地址，接下来我们就需要打开并添加以上地址到hosts文件中，我的电脑是MacOS系统，以下操作Win和Linux略有不同，百度皆有。
+						<ul>
+							<li>
+								首先需要找到host文件：打开终端（command+空格搜索）>-输入 /private/etc，在这个文件夹里找到hosts；
+							</li>
+							<li>此时hosts文件是不可修改的，需要把它拖动到桌面；</li>
+							<li>打开桌面上的hosts，复制上述ip地址到hosts的最后；</li>
+							<li>保存，将hosts拖回刚才的etc文件夹，替换。</li>
+							<li>刷新系统DNS：在终端输入指令 sudo dscacheutil -flushcache</li>
+							<li>此时，刷新Coursera网页，视频有可能就会出来了。</li>
+						</ul>
+					</li>
+				</ol>
+				
+                更改host文件
+                先ping
+                批量下载Coursera视频
+                    下载Cousera Downloader
+                    <a href="https://pypi.org/project/coursera-dl/#coursera-downloader">官方教程（英文）</a>
+                    如果不想费脑子配置后台，可以先在这个网站检索有没有想要的课程：
+                    <a href="http://blog.coursegraph.com/tag/coursera下载">Coursera公开资源列表</a>（包含下载教程中文）
+                使用Cousera Download的经验：
+                    打开终端
+                    cd coursera-dl
+                    ./coursera-dl -u 用户名 -p 密码 --path=保存路径 课程名字
+			</p>
+				<div class="footer">©Yani Huang 2019-2020</div>	
+			</div>
+		
+	</body>
+</html>
