@@ -118,7 +118,7 @@ div h2{
 
 blockquote {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
+  text-align: left;
   font-size: 0.9em;
   margin: 1em 0;
   padding: 0 2em;
@@ -129,6 +129,7 @@ blockquote {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: left;
   background-color: darkgray;
+  opacity: 0.5;
 }
 .main{
   width: 520px;
