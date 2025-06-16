@@ -1,68 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="author" content="">
+		<meta name="author" content="Yani">
 		<meta name="description" content="personal website of Yani">
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link rel="stylesheet" type="text/css" href="/css/font.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		<link rel="icon" href="img/moon.jpg" type="image/x-icon"/>
-		<title>Yani </title>
+		<title>Yani's Blog</title>
 	</head>
 	<body>
+		<nav class="navbar">
+			<div class="nav-brand">
+				<a href="/">Yani's Blog</a>
+			</div>
+			<div class="nav-menu">
+				<ul>
+					<li><a href="/"><i class="fas fa-home"></i> 首页</a></li>
+					<li><a href="cn/cn_art.html"><i class="fas fa-book"></i> 中文文章</a></li>
+					<li><a href="en/en_art.html"><i class="fas fa-globe"></i> English</a></li>
+					<li><a href="comment.html"><i class="fas fa-comments"></i> 留言板</a></li>
+					<li><a href="#about"><i class="fas fa-user"></i> 关于我</a></li>
+				</ul>
+			</div>
+			<div class="nav-toggle">
+				<i class="fas fa-bars"></i>
+			</div>
+		</nav>
+
 		<div class="main">
-			<h1>I Am Unstoppable Yawl</h1>
-				<h2>❀  自我介绍 ｜ About me</menu></menu></h2>
+			<div class="hero">
+				<h1>I Am Unstoppable Yawl</h1>
+				<p class="subtitle">探索 · 记录 · 创造</p>
+			</div>
+
+			<section id="about" class="section">
+				<h2><i class="fas fa-user-circle"></i> 自我介绍 | About me</h2>
+				<div class="content-card">
 					<p> 			
-					    
 						喜欢开阔的生命：苏轼辛弃疾、魁地奇训练场和山脉天空。<br>
 						对未来的希望是：一步步内敛理性，平和推进自我的强大。<br>
-						平常略读书，相信源源不断的人生经历会带来惊喜的反刍。<br>
+						平常略读书，相信源源不断的人生经历会带来惊喜的反刍。
 					</p>
+				</div>
+			</section>
 					
-				<h2> ❄︎  关于博客 | About blog </h2>
+			<section class="section">
+				<h2><i class="fas fa-book-open"></i> 关于博客 | About blog</h2>
+				<div class="content-card">
+					<p>
+						<strong>初衷：</strong>我把自己当作一个中性的人，是一个无差别的观察者，对象也包括自己。同时我也庆幸，我还是个热情的经历者，没有失去对人的爱与希望，保留着对世界的好奇和责任。写下来对我而言是向内自省和向外探索的一种手段，也正是在记录的每一刻，我察觉自己的幼稚和对这个世界未解的迷惑，我希望这样的认真能够常伴，不至于让日子从人生表面滑下去。
+					</p>
+					<p class="english-text">
+						I am a explorer of the small world around me,<br>
+						and being endless to expand it.<br>
+						To have this blog is like to write a seawoman's log-book.<br>
+						I experience and I record; I imagine and I create.
+					</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2><i class="fas fa-link"></i> 邻客 | Links</h2>
+				<div class="content-card">
+					<ul class="links-list">
+						<li>
+							<a href="https://www.cnblogs.com/vamei/" target="_blank">
+								<i class="fas fa-external-link-alt"></i> Vamei
+							</a>
+							：一位编程爱好者，温柔的赤道野风。
+						</li>
+						<li>
+							<a href="https://yihui.org/" target="_blank">
+								<i class="fas fa-external-link-alt"></i> 谢益辉
+							</a>
+							：一位R语言工程师，编织生活趣味与奇妙思想。
+						</li>
+						<li>
+							<a href="https://shanyed.github.io/shanyed/index.html" target="_blank">
+								<i class="fas fa-external-link-alt"></i> D
+							</a>
+							：一位女性密友，不惧在生活幻境中独自冒险。
+						</li>
+					</ul>
+				</div>
+			</section>
 						
-						<p>
-							<strong>初衷：</strong>我把自己当作一个中性的人，是一个无差别的观察者，对象也包括自己。同时我也庆幸，我还是个热情的经历者，没有失去对人的爱与希望，保留着对世界的好奇和责任。写下来对我而言是向内自省和向外探索的一种手段，也正是在记录的每一刻，我察觉自己的幼稚和对这个世界未解的迷惑，我希望这样的认真能够常伴，不至于让日子从人生表面滑下去。<br>
-							
-						</p>
-						<p>
-							I am a explorer of the small world around me,<br>
-							and being endless to expand it.<br>
-							To have this blog is like to write a seawoman's log-book.<br>
-							I experience and I record; I imagine and I create.
-						</p>
-					
+			<section class="section">
+				<h2><i class="fas fa-list"></i> 主要内容 | Contents</h2>
+				<div class="content-card">
+					<div class="content-links">
+						<a href="cn/cn_art.html" class="content-link">
+							<i class="fas fa-arrow-right"></i> 就从这里开始吧。
+						</a>
+						<a href="en/en_art.html" class="content-link">
+							<i class="fas fa-arrow-right"></i> Welcome to my world.
+						</a>
+						<a href="comment.html" class="content-link">
+							<i class="fas fa-arrow-right"></i> 畅所欲言/Leave your words.
+						</a>
+					</div>
+				</div>
+			</section>
 
-						<p>
-							<strong>邻客 ｜ Links：</strong>
-							<ul>
-								<li><a href="https://www.cnblogs.com/vamei/" target="_blank">Vamei</a>
-									：一位编程爱好者，温柔的赤道野风。
-								</li>
-								<li><a href="https://yihui.org/" target="_blank">谢益辉</a>
-									：一位R语言工程师，编织生活趣味与奇妙思想。
-									</li>
-									<li><a href="https://shanyed.github.io/shanyed/index.html" target="_blank">D</a>
-										：一位女性密友，不惧在生活幻境中独自冒险。
-										</li>
-							</ul>
-						</p>
-						
-				<h2>✿  主要内容 ｜ Contents</h2>
-						<p><a href="cn/cn_art.html">- 就从这里开始吧。</a> <br>
-							<a href="en/en_art.html">- Welcome to my world.</a><br>
-							<a href="comment.html">- 畅所欲言/Leave your words.</a><br>
-						
-						</p>
-
-
-			
-			<div class="footer">©Yani 2019-2025</div>	
-
+			<footer class="footer">
+				<div class="social-links">
+					<a href="#" target="_blank"><i class="fab fa-github"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+				</div>
+				<p>©Yani 2019-2025</p>
+			</footer>
 		</div>
-		
+
+		<script>
+			document.querySelector('.nav-toggle').addEventListener('click', function() {
+				document.querySelector('.nav-menu').classList.toggle('active');
+			});
+		</script>
 	</body>
 </html>
