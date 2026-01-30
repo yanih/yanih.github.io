@@ -161,6 +161,282 @@ blockquote {
 }
 
 
-/*页面变化布局变化*/ 
-/*选定仅文本，而不是整个页面宽度*/ 
-/* @media*/
+/* Responsive */
+@media screen and (max-width: 1100px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    padding: env(safe-area-inset-top) calc(var(--spacing-unit) * 1) 0;
+  }
+
+  header li {
+    list-style-type: none;
+    margin: 0 15px;
+  }
+
+  .main {
+    margin-left: calc(var(--spacing-unit) * 1);
+    margin-right: calc(var(--spacing-unit) * 1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font-size-base: 1.125rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 0.875rem;
+    --spacing-unit: 0.75rem;
+  }
+
+  html {
+    font-size: 90%;
+  }
+
+  body {
+    font-family: 'Times New Roman', 'Georgia', 'Palatino', 'Noto Sans HK', sans-serif;
+    font-size: var(--font-size-base);
+  }
+
+  h1,
+  .track-title {
+    font-size: clamp(1rem, 5vw, var(--font-size-medium));
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+  }
+
+  h2 {
+    font-size: clamp(0.875rem, 4vw, 1.125rem);
+    margin-top: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: clamp(0.875rem, 3.5vw, 1rem);
+  }
+
+  header {
+    display: none;
+  }
+
+  .header-menu {
+    display: block;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .header-logo {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .theme-toggle {
+    font-size: var(--font-size-small);
+    padding: calc(var(--spacing-unit) * 0.5);
+    height: 40px;
+  }
+
+  nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: var(--misc-background);
+    border-bottom: 1px solid var(--misc-divider);
+    border-right: none;
+    z-index: 1000;
+    padding: calc(var(--spacing-unit) * 0.5) 0;
+  }
+
+  nav h2 {
+    display: none;
+  }
+
+  nav ul.sidebar {
+    display: flex;
+    flex-direction: row;
+    /* Ensure horizontal layout */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Align items vertically in the center */
+    gap: calc(var(--spacing-unit) * 0.75);
+    /* Space between items */
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1);
+    /* Horizontal padding */
+    margin: 0;
+    flex-wrap: nowrap;
+    /* Prevent wrapping to new lines */
+  }
+
+  nav ul.sidebar li {
+    line-height: 1;
+    /* Remove vertical spacing from line-height */
+  }
+
+  nav ul.sidebar li a {
+    font-size: var(--font-size-small);
+    padding: calc(var(--spacing-unit) * 0.5);
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    min-width: 0;
+    /* Allow natural width based on content */
+  }
+
+  .main {
+    width: 90%;
+    margin: calc(var(--spacing-unit) * 4) auto calc(var(--spacing-unit) * 2);
+    padding: 0 calc(var(--spacing-unit) * 1);
+    font-size: var(--font-size-base);
+  }
+
+  .main p {
+    line-height: var(--line-height-base);
+    margin-bottom: calc(var(--spacing-unit) * 1.2);
+  }
+
+  .paperlist li {
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+  }
+
+  .footer {
+    font-size: var(--font-size-small);
+    margin: calc(var(--spacing-unit) * 2) auto calc(var(--spacing-unit) * 1);
+    padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1) env(safe-area-inset-bottom);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-language {
+    gap: calc(var(--spacing-unit) * 0.5);
+  }
+
+  .footer-language .theme-toggle {
+    padding: calc(var(--spacing-unit) * 0.25);
+  }
+
+  .video-container {
+    width: 100%;
+    height: 200px;
+    margin: calc(var(--spacing-unit) * 1) auto;
+  }
+
+  figure {
+    margin-right: calc(var(--spacing-unit) * 0.5);
+    max-width: 100%;
+  }
+
+  figcaption {
+    font-size: var(--font-size-small);
+    margin-top: calc(var(--spacing-unit) * 0.25);
+  }
+
+  blockquote {
+    font-family: 'Times New Roman', 'Georgia', 'Palatino', 'Noto Sans HK', sans-serif;
+    font-size: var(--font-size-small);
+    padding: 0 calc(var(--spacing-unit) * 1);
+    margin: calc(var(--spacing-unit) * 0.75) 0;
+  }
+
+  aside {
+    font-size: var(--font-size-small);
+    padding: calc(var(--spacing-unit) * 0.5);
+    margin: calc(var(--spacing-unit) * 0.75) 0;
+  }
+
+  aside a {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-right: 0.5em;
+  }
+
+  aside a:hover {
+    color: var(--text-primary);
+    background: var(--link-hover-background);
+    border-radius: 2px;
+  }
+
+  .code {
+    font-size: var(--font-size-small);
+    padding: 2px 6px;
+  }
+}
+
+/* Table Styling  */
+table {
+  width: 79%;
+  max-width: 97%;
+  border-collapse: collapse;
+  margin: var(--spacing-unit) 0;
+  background-color: var(--misc-background);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  transition: var(--transition);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  table-layout: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table thead {
+  background-color: #e0e0e0;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-family: 'Noto Serif SC', serif;
+  text-align: center;
+}
+
+html[data-theme="dark"] table thead {
+  background-color: #2a2a2a;
+  color: var(--text-primary-dark);
+}
+
+table th {
+  padding: 0.5rem 0.75rem;
+  /* 控制上下空间 */
+  line-height: 0.75;
+  /* 控制行内文本的行高 */
+  vertical-align: middle;
+  /* 垂直居中 */
+}
+
+table td {
+  border: 1px solid var(--misc-divider);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: var(--line-height-base);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+html[data-theme="dark"] table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+
+table tbody tr:hover {
+  background-color: rgba(127, 127, 127, 0.1);
+  transition: var(--transition);
+}
+
+html[data-theme="dark"] table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.scroll-container {
+  overflow-x: auto;
+  width: 100%;
+}
